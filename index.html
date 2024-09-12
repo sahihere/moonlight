@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="stars.png" id="star">
+        <img src="moon.png" id="moon">
+        <img src="mountains_behind.png" id="mountains_behind">
+       <h2 id="text">Moon Light</h2>
+       <a href="#sec" id="btn">Explore</a>
+        <img src="mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sunt molestias voluptates voluptate molestiae consectetur. Accusamus voluptates in laudantium impedit? Facilis soluta velit quia, consequatur excepturi commodi, assumenda animi, modi quis labore minima est nihil qulaceat aliquam, quo perspiciatis a natus.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, voluptatibus. Explicabo, omnis suscipit? Ipsum consectetur quo sequi reiciendis perspiciatis totam dicta tenetur obcaecati non alias ex, explicabo fugiat ea dolore! Repellat veritatis pariatur sed voluptate ducimus. Sequi officia esse ea voluptas nulla illo doloremque architecto eligendi obcaecati necessitatibus dicta ratione explicabo in, <br><br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur minus maiores nihil similique velit, vitae magni enim dolore nesciunt, rem obcaecati quis aliquid sed sit sapiente ab ex consequatur necessitatibus expedita, reiciendis modi odio perferendis. Natus id quaerat error nemo impedit consecteturcupiditate? Nulla, beatae deserunt. Ex et !<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sunt molestias voluptates voluptate molestiae consectetur. Accusamus voluptates in laudantium impedit? Facepe mollitia delectus numquam! Recusandae consequuntur exercitationem quaerat ipsam voluptatum nihil quis tenetur! Voluptatem ad debitis dolor, ipsa facilis voluptatum reprehenderit, vitae autem aliquid recusandae obcaecati at fugit minus asperiores molestiae vel incidunt saepe iure! Velit harum vel ducimus reprehenderit placeat. Voluptatibus tempore placeat aliquam, quo perspiciatis a natus.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, voluptatibus. Explicabo, omnis suscipit? Ipsum consectetur quo sequi reiciendis perspiciatis totam dicta tenetur obcaecati non alias ex, explicabo fugiat ea dolore! Repellat veritatis pariatur sed voluptate ducimus. Sequi officia esse ea voluptas nulla illo doloremque architecto eligendi obcaecati necessitatibus dicta ratione explicabo in, <br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sunt molestias voluptates voluptate molestiae consectetut dicta hic cum corrupti voluptate dolore, saepe mollitia delectus numquam! Recusandae consequuntur exercitationem quaerat ipsam voluptatum nihil quis tenetur! Voluptatem ad debitis dolor, ipsa facilis voluptatum reprehenderit, vitae autem aliquid recusandae obcaecati at fugit minus asperiores molestiae vel incidu <br><br>Lorem ipsum dolor sit amet consectetur adipi delectus numquam! Recusandae consequuntur exercitationem quaerat ipsam voluptatum nihil quis tenetur! Voluptatem ad debitis dolor, ipsa facilis voluptatum reprehenderit, vitae autem aliquid recusandae obcaecati at fugit minus asperiores molestiae vel incidunt saepe iure! Velit harum vel ducimus reprehenderit placeat. Voluptatibus tempore placeat aliquam, quo perspiciatis a natus.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, voluptatibus. Explicabo, omnis suscipit? Ipsum consectetur quo sequi reiciendis perspiciatis totam dicta tenetur obcaecati non alias ex, explicabo fugiat ea dolore! Repellat veritatis pariatur sed voluptate ducimus. Sequi officia esse ea voluptas nulla illo doloremque architecto eligendi obcaecati necessitatibus dicta ratione explicabo in, <br><br></p>
+
+    </div>
+    <script>
+         let stars = document.getElementById('star');
+         let moon = document.getElementById('moon');
+         let mountains_behind = document.getElementById('mountains_behind');
+         let text = document.getElementById('text');
+         let btn = document.getElementById('btn');
+         let mountains_front = document.getElementById('mountains_front');
+         let header = document.querySelector('header');
+
+         window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top =  value * 0.5 + 'px';
+
+         } )
+
+    </script>
+</body>
+</html>
